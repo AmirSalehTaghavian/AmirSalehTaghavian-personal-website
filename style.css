@@ -1,0 +1,442 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8491a0;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5a6573;
+}
+:root {
+  --bcg-body: #161513;
+  --opt-h3: #fff;
+  --h1: #fff;
+  --nav-bcg: #2a2a2a;
+  --h2-cun: #fff;
+  --EXPERIENCE-cl: #c5c5c5;
+  --bgc-get-in: transparent;
+  --cl-get-in: #fff;
+  --cl-border: 2px solid #fff;
+  --bgc-dl-cv: #161513;
+  --cl-dl-cv: #fff;
+  --cl-border-dl-cv: 2px solid #fff;
+  --bgc-dl-cv-hov: #fff;
+  --cl-dl-cv-hov: #000;
+  --html-icon-cl: #c5c5c5;
+  --css-icon-cl: #c5c5c5;
+  --js-icon-cl: #c5c5c5;
+  --bgc-tutorials: #2a2a2a;
+  --cl-title-toturial: #fff;
+  --menu-act-bgc: #161513;
+  --cl-opt-menu-act: #fff;
+  --brands-icons: #fff;
+  --work-date-cl: dimgray;
+  --work-desc-cl: #8491a0;
+  --work-title: #fff;
+  --footer-bgc: #191919;
+  --footer-title-cl: #fff;
+  --footer-email-cl: #fff;
+  --footer-desc-cl: #8491a0;
+  --youtube-link-bgc: #000000;
+  --instagram-link-bgc: #000000;
+  --telegram-link-bgc: #000000;
+}
+[data-theme = "dark"] {
+  --bcg-body: #fff;
+  --opt-h3: #161513;
+  --h1: #161513;
+  --nav-bcg: #c4c4c4;
+  --h2-cun: #161513;
+  --EXPERIENCE-cl: #161513;
+  --bgc-get-in: #000;
+  --cl-get-in: #fff;
+  --bgc-dl-cv: #fff;
+  --cl-dl-cv: #000;
+  --cl-border-dl-cv: 2px solid #161513;
+  --bgc-dl-cv-hov: #000;
+  --cl-dl-cv-hov: #fff;
+  --html-icon-cl: orangered;
+  --css-icon-cl: blue;
+  --js-icon-cl: yellow;
+  --bgc-tutorials: #c4c4c4;
+  --cl-title-toturial: #000;
+  --box-shadow-toturial: 0px 5px 15px rgba(0, 0, 0, 0.55);
+  --menu-act-bgc: dimgrey;
+  --cl-opt-menu-act: #000;
+  --brands-icons: #1d304f;
+  --work-date-cl: #161513;
+  --work-desc-cl: #48515d;
+  --work-title: #000;
+  --footer-bgc: #c6c6c6;
+  --footer-title-cl: #161513;
+  --footer-email-cl: #161513;
+  --footer-desc-cl: #48515d;
+  --youtube-link-bgc: red;
+  --instagram-link-bgc: #e4405f;
+  --telegram-link-bgc: #0088cc;
+}
+body {
+  background-color: var(--bcg-body);
+  transition: background 0.5s;
+}
+button {
+  cursor: pointer;
+}
+.nav-bar {
+  width: 100%;
+  height: 60px;
+  box-shadow: 2px 2px 14px rgba(0, 0, 0, 0.3);
+  background-color: var(--nav-bcg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  transition: height 0.5s;
+}
+.logo {
+  margin-left: 25px;
+}
+.logo img {
+  margin-top: 5px;
+}
+.options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.options h3 {
+  color: var(--opt-h3);
+  margin: 20px;
+  cursor: pointer;
+}
+.theme-switcher {
+  margin-right: 20px;
+  cursor: pointer;
+}
+.menu {
+  margin-right: 30px;
+  margin-top: 5px;
+  color: #fff;
+  margin-left: -650px;
+  display: none;
+  cursor: pointer;
+}
+.menu-active {
+  height: 100%;
+  width: 210px;
+  position: fixed;
+  background-color: var(--menu-act-bgc);
+  top: 0;
+  left: 0;
+  display: none;
+}
+.menu-active button {
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  font-size: 19px;
+  width: 120px;
+  margin-left: 20px;
+  color: var(--cl-opt-menu-act);
+  background: none;
+  border: none;
+  outline: none;
+  transition: all 320ms;
+  cursor: pointer;
+}
+.menu-active img {
+  margin-left: 70px;
+  transition: all 320ms;
+}
+.menu-active img:hover {
+  transform: scale(1.02);
+}
+.close-menu {
+  font-size: 35px !important;
+  width: 30px !important;
+  height: 30px !important;
+  color: var(--cl-opt-menu-act) !important;
+  margin-left: 25px !important;
+  margin-top: 15px !important;
+}
+.menu-active button:hover {
+  transform: scale(1.02);
+}
+.avatar {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.avatar img {
+  width: 251px;
+  height: 223px;
+}
+.h1 {
+  color: var(--h1);
+  display: block;
+  text-align: center;
+  font-size: 65px;
+}
+.h1-continue {
+  display: block;
+  text-align: center;
+  color: var(--h2-cun);
+  font-size: 65px;
+}
+.h1-continue span {
+  color: #9f3af2;
+}
+.info {
+  height: 204px;
+  width: 384px;
+  color: #8491a0;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: justify;
+}
+.info-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btns {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+  justify-content: center;
+}
+.get-in-touch-btn {
+  background-color: #fff;
+  border-radius: 32px;
+  width: 217px;
+  height: 67px;
+  font-size: 24px;
+  font-weight: bold;
+  transition: all 340ms;
+  outline: none;
+}
+.get-in-touch-btn:hover {
+  background: var(--bgc-get-in);
+  color: var(--cl-get-in);
+  transform: scale(var());
+  border: var(--cl-border);
+}
+.download-cv-btn {
+  background-color: transparent;
+  background: var(--bgc-dl-cv);
+  border: 2px solid #fff;
+  border-radius: 32px;
+  width: 217px;
+  height: 67px;
+  font-size: 24px;
+  border: var(--cl-border-dl-cv);
+  color: var(--cl-dl-cv);
+  font-weight: bold;
+  margin-left: 20px;
+  transition: all 340ms;
+  outline: none;
+}
+.download-cv-btn:hover {
+  color: var(--cl-dl-cv-hov);
+  background-color: var(--bgc-dl-cv-hov);
+}
+.EXPERIENCE {
+  color: var(--EXPERIENCE-cl);
+  text-align: center;
+  margin-bottom: 2px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+.html-css-js {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.html-css-js i {
+  font-size: 60px;
+  margin: 30px;
+}
+.html-tutorial {
+  width: 368px;
+  height: 301px;
+  border-radius: 16px;
+  background-color: var(--bgc-tutorials);
+  overflow: hidden;
+  margin: 40px;
+  box-shadow: var(--box-shadow-toturial);
+}
+.html-tutorial-img {
+  border-radius: 16px 16px 0 0;
+  cursor: pointer;
+}
+.projects-title {
+  font-weight: bold;
+  font-size: 56px;
+  color: #e0592e;
+  text-align: center;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.html-toturial-options {
+  background-color: var(--bgc-tutorials);
+}
+.pro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.name-of-projects {
+  color: var(--cl-title-toturial);
+  font-size: 19px;
+  display: flex;
+  font-weight: bold;
+  justify-content: left;
+  margin-left: 12px;
+  margin-top: 14px;
+}
+.experience {
+  color: #348ee6;
+  font-size: 54px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.work-in-google {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+.google-p {
+  margin-left: -40px;
+  color: var(--work-title);
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+.date {
+  margin-left: 150px;
+  color: var(--work-date-cl);
+}
+.desc-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px;
+}
+.desc {
+  width: 600px;
+  text-align: center;
+  color: var(--work-desc-cl);
+  display: block;
+}
+footer {
+  width: 100%;
+  height: 360px;
+  background-color: var(--footer-bgc);
+}
+.contact-title {
+  color: var(--footer-title-cl);
+  margin-left: 200px;
+  font-weight: bold;
+}
+.email {
+  color: var(--footer-email-cl);
+  margin-left: 200px;
+}
+.footer-desc {
+  width: 720px;
+  margin-left: 200px;
+  color: var(--footer-desc-cl);
+  margin-bottom: 42px;
+}
+.social-medias {
+  margin-left: 200px;
+}
+.social-medias-link {
+  text-decoration: none;
+}
+.social-medias-btn {
+  width: 45px;
+  height: 45px;
+  border: 1px solid dimgray;
+  outline: none;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  transition: all 320ms;
+}
+.social-medias-link2 {
+  margin-left: 70px;
+  text-decoration: none;
+}
+.social-medias-link3 {
+  margin-left: 70px;
+  text-decoration: none;
+}
+.social-medias-btn:hover {
+  transform: scale(1.025);
+}
+@media (max-width: 1023px) {
+  .menu {
+    display: block;
+  }
+  .options {
+    display: none;
+  }
+  .html-tutorial-img {
+    width: 100%;
+    height: 82%;
+    object-fit: cover;
+  }
+  .date {
+    font-size: 12px;
+    margin: 0;
+  }
+  .google-p {
+    font-size: 14px;
+    margin: 0;
+  }
+  .work-in-google {
+    gap: 20px;
+  }
+  .email {
+    text-align: center;
+    margin: 0;
+  }
+  .footer-desc {
+    width: 94%;
+    text-align: center;
+    margin: 0;
+  }
+  .social-medias {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+}
